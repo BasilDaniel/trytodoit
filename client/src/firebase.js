@@ -15,7 +15,7 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 export const pushNotificationsInit = () => {
-  if (window.location.protocol !== 'http:') {
+  if (window.location.protocol !== 'https:') {
     return;
   }
   if (!('Notification' in window)) {
