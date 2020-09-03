@@ -13,48 +13,46 @@
 // Give the service worker access to Firebase Messaging.
 // Note that you can only use Firebase Messaging here, other Firebase libraries
 // are not available in the service worker.
-importScripts("https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js");
-importScripts(
-  "https://www.gstatic.com/firebasejs/7.18.0/firebase-messaging.js"
-);
+importScripts('https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js');
+importScripts('https://www.gstatic.com/firebasejs/7.18.0/firebase-messaging.js');
 // Initialize the Firebase app in the service worker by passing in
 // your app's Firebase config object.
 // https://firebase.google.com/docs/web/setup#config-object
 firebase.initializeApp({
-  apiKey: "AIzaSyDezWlrEuZygNS9NbIh8qIk4URkvOq1ZwM",
-  authDomain: "idatchik.firebaseapp.com",
-  databaseURL: "https://idatchik.firebaseio.com",
-  projectId: "idatchik",
-  storageBucket: "idatchik.appspot.com",
-  messagingSenderId: "169158173801",
-  appId: "1:169158173801:web:bfb08ea0e2639b326beef8",
-  measurementId: "G-SH6PDEHH7F",
+  apiKey: 'AIzaSyDezWlrEuZygNS9NbIh8qIk4URkvOq1ZwM',
+  authDomain: 'idatchik.firebaseapp.com',
+  databaseURL: 'https://idatchik.firebaseio.com',
+  projectId: 'idatchik',
+  storageBucket: 'idatchik.appspot.com',
+  messagingSenderId: '169158173801',
+  appId: '1:169158173801:web:bfb08ea0e2639b326beef8',
+  measurementId: 'G-SH6PDEHH7F',
 });
 // Retrieve an instance of Firebase Messaging so that it can handle background
 // messages.
 const messaging = firebase.messaging();
-let count = 0;
+// let count = 0;
 // [END initialize_firebase_in_sw]
 
 // If you would like to customize notifications that are received in the
 // background (Web app is closed or not in browser focus) then you should
 // implement this optional method.
 // [START background_handler]
-messaging.setBackgroundMessageHandler(function (payload) {
-  console.log(
-    "[firebase-messaging-sw.js] Received background message ",
-    payload
-  );
-  // Customize notification here
-  const notificationTitle = ++count;
-  const notificationOptions = {
-    body: "Background Message body.",
-    icon: "/firebase-logo.png",
-  };
+// messaging.setBackgroundMessageHandler(function (payload) {
+//   console.log(
+//     "[firebase-messaging-sw.js] Received background message ",
+//     payload
+//   );
+//   // Customize notification here
+//   const notificationTitle = ++count;
+//   const notificationOptions = {
+//     body: "Background Message body.",
+//     icon: "/firebase-logo.png",
+//   };
 
-  return self.registration.showNotification(
-    notificationTitle,
-    notificationOptions
-  );
-});
+//   return self.registration.showNotification(
+//     notificationTitle,
+//     notificationOptions
+//   );
+// });
 // [END background_handler]
