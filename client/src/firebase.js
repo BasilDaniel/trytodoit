@@ -32,12 +32,11 @@ export const pushNotificationsInit = () => {
         throw new Error(error);
       });
     messaging.onMessage((payload) => {
-      alert(payload.notification.body);
+      console.log(payload);
       const notification = new Notification(payload.notification.title, {
         body: payload.notification.body,
         icon: '',
       });
-      alert(payload.notification.body);
     });
   }
 };
