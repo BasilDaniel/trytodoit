@@ -15,7 +15,7 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 export const pushNotificationsInit = () => {
-  if (window.location.protocol !== 'https:') {
+  if (window.location.protocol !== 'http:') {
     return;
   }
   if (!('Notification' in window)) {
@@ -26,6 +26,7 @@ export const pushNotificationsInit = () => {
       .requestPermission()
       .then(() => messaging.getToken())
       .then((token) => {
+        console.log(1111);
         sessionStorage.setItem('firebaseToken', token);
       })
       .catch((error) => {
