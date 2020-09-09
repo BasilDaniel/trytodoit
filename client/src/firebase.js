@@ -34,8 +34,8 @@ export const pushNotificationsInit = () => {
       });
     messaging.onMessage((payload) => {
       console.log(payload);
-      const notification = new Notification(payload.notification.title, {
-        body: payload.notification.body,
+      const notification = new Notification(payload.priority, {
+        body: payload.priority,
         icon: '',
       });
     });
