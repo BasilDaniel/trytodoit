@@ -2,14 +2,13 @@ import * as firebase from 'firebase';
 import 'firebase/messaging';
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyDezWlrEuZygNS9NbIh8qIk4URkvOq1ZwM',
-  authDomain: 'idatchik.firebaseapp.com',
-  databaseURL: 'https://idatchik.firebaseio.com',
-  projectId: 'idatchik',
-  storageBucket: 'idatchik.appspot.com',
-  messagingSenderId: '169158173801',
-  appId: '1:169158173801:web:bfb08ea0e2639b326beef8',
-  measurementId: 'G-SH6PDEHH7F',
+  apiKey: 'AIzaSyCO6sVtvLWTWhURgbwTkBhGUBamfZeIKOo',
+  authDomain: 'fir-cloud-messaging-a9470.firebaseapp.com',
+  databaseURL: 'https://fir-cloud-messaging-a9470.firebaseio.com',
+  projectId: 'fir-cloud-messaging-a9470',
+  storageBucket: 'fir-cloud-messaging-a9470.appspot.com',
+  messagingSenderId: '281453132916',
+  appId: '1:281453132916:web:b1987b35176b404430a521',
 };
 
 firebase.initializeApp(firebaseConfig);
